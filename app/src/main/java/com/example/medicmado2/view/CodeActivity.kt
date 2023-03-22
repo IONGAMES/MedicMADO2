@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.ViewModelProvider
+import com.example.medicmado2.PasswordActivity
 import com.example.medicmado2.ui.components.AppBackButton
 import com.example.medicmado2.ui.components.AppTextField
 import com.example.medicmado2.ui.theme.MedicMADO2Theme
@@ -86,6 +87,9 @@ class CodeActivity : ComponentActivity() {
                     putString("token", token)
                     apply()
                 }
+
+                val intent = Intent(mContext, PasswordActivity::class.java)
+                startActivity(intent)
             }
 
             isLoading = false

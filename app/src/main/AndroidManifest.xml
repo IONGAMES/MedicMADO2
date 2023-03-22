@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,12 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedicMADO2"
         android:usesCleartextTraffic="true"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".PasswordActivity"
+            android:exported="false"
+            android:label="@string/title_activity_password"
+            android:theme="@style/Theme.MedicMADO2">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".view.OnboardActivity"
             android:exported="false"
             android:label=""
-            android:theme="@style/Theme.MedicMADO2" >
+            android:theme="@style/Theme.MedicMADO2">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -28,7 +37,7 @@
             android:name=".view.LoginActivity"
             android:exported="false"
             android:label=""
-            android:theme="@style/Theme.MedicMADO2" >
+            android:theme="@style/Theme.MedicMADO2">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -38,8 +47,7 @@
             android:exported="false"
             android:label=""
             android:theme="@style/Theme.MedicMADO2"
-            android:windowSoftInputMode="adjustResize"
-            >
+            android:windowSoftInputMode="adjustResize">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -48,7 +56,7 @@
             android:name=".view.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.MedicMADO2" >
+            android:theme="@style/Theme.MedicMADO2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

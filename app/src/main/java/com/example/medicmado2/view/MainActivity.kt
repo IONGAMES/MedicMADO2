@@ -20,6 +20,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.medicmado2.PasswordActivity
 import com.example.medicmado2.R
 import com.example.medicmado2.ui.theme.MedicMADO2Theme
 import kotlinx.coroutines.delay
@@ -72,8 +73,13 @@ class MainActivity : ComponentActivity() {
                     val intent = Intent(mContext, OnboardActivity::class.java)
                     startActivity(intent)
                 } else {
-                    val intent = Intent(mContext, LoginActivity::class.java)
-                    startActivity(intent)
+                    if (shared.getString("token", "") != "") {
+                        val intent = Intent(mContext, PasswordActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        val intent = Intent(mContext, LoginActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
         }

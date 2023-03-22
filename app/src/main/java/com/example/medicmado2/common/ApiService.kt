@@ -14,12 +14,23 @@ import retrofit2.http.POST
 Автор: Георгий Хасанов
  */
 interface ApiService {
+
+    /*
+    Описание: Функция отправки кода на email
+    Дата создания: 22.03.2023 15:20
+    Автор: Георгий Хасанов
+     */
     @Headers(
         "accept: application/json"
     )
     @POST("sendCode")
     suspend fun sendCode(@Header("email") email: String): Response<JsonObject>
 
+    /*
+    Описание: Функция проверки кода из email
+    Дата создания: 22.03.2023 15:20
+    Автор: Георгий Хасанов
+     */
     @Headers(
         "accept: application/json"
     )

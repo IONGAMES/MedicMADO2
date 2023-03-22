@@ -62,7 +62,6 @@ class LoginActivity : ComponentActivity() {
     @Composable
     fun ScreenContent() {
         val mContext = LocalContext.current
-        val shared = this.getSharedPreferences("shared", Context.MODE_PRIVATE)
         val viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
         var emailText by rememberSaveable { mutableStateOf("") }
