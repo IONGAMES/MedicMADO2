@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MedicMADO2</string>
+    <string name="title_activity_onboard">OnboardActivity</string>
 </resources>
